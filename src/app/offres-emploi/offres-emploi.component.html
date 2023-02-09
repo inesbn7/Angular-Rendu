@@ -1,0 +1,21 @@
+<h1>EX1:</h1>
+<div class="row">
+    <div class="col-md-4" *ngFor="let e of listEmploi">
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{e.titre}}</h5>
+                <p class="card-text">Entreprise: {{e.entreprise}}</p>
+                <p class="card-text">Reference: {{e.reference}}</p>
+                <p class="card-text">Etat: {{e.etat}}</p>
+                <button href="#" class="btn btn-primary" [disabled]="e.etat==false">Postuler</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<button class="btn btn-primary" (click)="calculerB()">Bilan</button>
+<form>
+    <input type="text" #i>
+    <button type="button" (click)="recherche(i.value)">Chercher</button>
+</form>

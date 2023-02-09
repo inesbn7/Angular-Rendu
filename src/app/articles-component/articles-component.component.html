@@ -1,0 +1,13 @@
+<h1>EX2:</h1>
+<input type="text" value="Nombre total d'articles: {{listArticles.length}}" disabled />
+<div class="col-md-4" *ngFor="let a of listArticles ">
+    <div class="card" style="width: 18rem;" *ngIf="a.categorie !== 'Travail'">
+        <div class="card-body" [ngStyle]="{'background-color': a.categorie === 'Education' ? 'blue' : 'white'}">
+            <h5 class="card-title">{{a.titre}}</h5>
+            <p class="card-text">Contenu: {{a. contenu}}</p>
+            <p class="card-text">Auteur: {{a.auteur}}</p>
+            <p class="card-text">Date: {{a.date}}</p>
+            <p class="card-text"> Catégorie: {{a.categorie}}</p>
+        </div>
+    </div>
+</div>
